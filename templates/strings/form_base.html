@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block project_nav %}
+{% include "projects/_menu.html" %}
+{% endblock %}
+
+{% block body %}
+<h1>{{ string.group }}</h1>
+<form action="{% block action %}{% endblock %}" method="post">
+  {% csrf_token %}
+
+  <div id="group">
+  <label for="id_group">{{ _('Group') }}</label>:<br />
+  {{ string_form.group }}
+  {{ string_form.group.errors }}
+  </div>
+
+  <section id="base-locale">
+    <label for="id_base-locale-text">{{ BASE_LOCALE_NAME }}</label>
+    {{ base_locale_translation_form.text }}
+    {{ base_locale_translation_form.text.errors }}
+    {{ base_locale_translation_form.locale }}
+  </section>
+
+  <section id="target-locale">
+    <label for="id_target-locale-text">{{ TARGET_LOCALE_NAME }}</label>
+    {{ target_locale_translation_form.text }}
+    {{ target_locale_translation_form.text.errors }}
+    {{ target_locale_translation_form.locale }}
+    <p>
+      {{ string_form.translated }}
+      <label for="id_translated">{{ _('Translated') }}</label>
+    </p>
+    <button type="submit">{% block button_label %}{% endblock %}</button>
+  </section>
+
+  <aside>
+    {% block aside %}{% endblock %}
+  </aside>
+</form>
+{% endblock %}
+

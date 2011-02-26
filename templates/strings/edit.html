@@ -1,0 +1,7 @@
+{% extends "strings/form_base.html" %}
+
+{% block action %}{% url strings_edit project_slug=project.slug string_id=string.id %}{% endblock %}
+{% block button_label %}{{ _('Save') }}{% endblock %}
+{% block aside %}
+{% include "strings/_history.html" %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<section>
+  <a href="{% url projects_new %}" id="new-project-link">{{_('New project')}}</a>
+  <h1><span>{{_('Projects')}}</span></h1>
+  <ul class="projects">
+  {% for project in projects %}
+    <li>{% include "projects/_project.html" %}</li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,4 @@
+*.py[co]
+*.db
+*.mo
+.sqlite3

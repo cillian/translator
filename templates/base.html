@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index" />
+  <title></title>
+  <link rel="stylesheet" href="{{ settings.MEDIA_URL }}/css/html5boilerplate.css" />
+  <link rel="stylesheet/less" href="{{ settings.MEDIA_URL }}/css/style.less" />
+  <script src="{{ settings.MEDIA_URL }}/js/less-1.0.41.min.js" type="text/javascript"></script>
+  <!--
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="alternate" type="application/atom+xml" title="My Weblog feed" href="/feed/" />
+  <link rel="search" type="application/opensearchdescription+xml" title="My Weblog search" href="opensearch.xml" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <script type="text/javascript" src="script.js" />
+  -->
+</head>
+<body id="{% block body_id %}{% endblock %}">
+
+<header>
+  <h1><a href="/">Translator</a></h1>
+  <nav id="user-nav"></nav>
+</header>
+
+  {% if messages %}
+      <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+      </ul>
+  {% endif %}
+
+{% block project_nav %}{% endblock %}
+
+<section id="content">
+{% block body %}{% endblock %}
+</section>
+
+<footer>
+  {{_('Languages')}}:
+  <ul>
+  {% for lang in LANGUAGES %}
+    <li><a href="{% url set_locale locale=lang.0 %}"{% ifequal lang.0 LOCALE %} class="current"{% endifequal %}>{{ lang.1 }}</a></li>
+  {% endfor %}
+  </ul>
+  <span id="fork-it">{{_('Fork it on')}} <a href="http://github.com/cillian/translator">GitHub</a>!</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<section id="menu">
+  <h1><a href="{% url projects_show slug=project.slug %}">{{project.name}}</a></h1>
+  <em>{{project.description}}</em>
+
+  <nav id="project-nav">
+    <form action="{% url set_target_locale %}" method="post">
+      {% csrf_token %}
+      <input name="next" type="hidden" value="{{ CURRENT_URL }}" />
+      {{ _('Translate To') }}:
+      <select name="language">
+        {% for lang in settings.LANGUAGES %}
+          {% ifnotequal lang.0 project.base_locale %}
+            <option value="{{ lang.0 }}"{% ifequal TARGET_LOCALE lang.0 %} selected="selected"{% endifequal %}>{{ lang.1 }}</option>
+          {% endifnotequal %}
+        {% endfor %}
+      </select>
+      <input type="submit" value="Go" />
+    </form>
+
+    <a href="{% url strings_new project_slug=project.slug %}" class="link-button">{{ _('New String') }}</a>
+  </nav>
+</section>

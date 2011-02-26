@@ -1,0 +1,22 @@
+from django.conf.urls.defaults import patterns, url
+
+urlpatterns = patterns('',
+  url(r'^$', 'projects.views.index',
+      name='projects_index'),
+  url(r'^new/$', 'projects.views.new',
+      name='projects_new'),
+  url(r'^create/$', 'projects.views.create',
+      name='projects_create'),
+  url(r'^set-target-locale/$', 'projects.views.set_target_locale',
+      name='set_target_locale'),
+  url(r'^set-locale/(?P<locale>[\w-]+)/$', 'projects.views.set_locale',
+      name='set_locale'),
+  url(r'^(?P<slug>[\w-]+)/$', 'projects.views.show',
+      name='projects_show'),
+  url(r'^(?P<project_slug>[\w-]+)/string/(?P<string_id>\d+)/edit/$', 'strings.views.edit',
+      name='strings_edit'),
+  url(r'^(?P<project_slug>[\w-]+)/string/(?P<string_id>\d+)/version/(?P<version_id>\d+)$', 'strings.views.show_version',
+      name='strings_show_version'),
+  url(r'^(?P<project_slug>[\w-]+)/string/(?P<string_id>\d+)/revert/(?P<version_id>\d+)$', 'strings.views.revert',
+      name='strings_revert'),
+)

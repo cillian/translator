@@ -1,0 +1,6 @@
+{% extends "strings/form_base.html" %}
+{% block body_id %}strings_new{% endblock %}
+{% block action %}{% url strings_create project_slug=project.slug %}{% endblock %}
+{% block button_label %}{{ _('Create String') }}{% endblock %}
+{% block aside %}{% endblock %}
+

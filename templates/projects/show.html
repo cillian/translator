@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block project_nav %}
+{% include "projects/_menu.html" %}
+{% endblock %}
+
+{% block body %}
+<h2>{{ _('Untranslated') }} ({{ untranslated_strings.count }} {{ _('strings') }})</h2>
+<table class="untranslated">
+  <tr>
+    <th>{{ _('Group') }}</th>
+    <th>{{ BASE_LOCALE_NAME }}</th>
+    <th>{{ TARGET_LOCALE_NAME }}</th>
+  </tr>
+{% for string in untranslated_strings %}
+  <tr>
+    <td class="group">{{ string.group }}</td>
+    <td class="base-locale"><a href="{% url strings_edit project_slug=project.slug string_id=string.id %}">{{string.base_locale}}</a></td>
+    <td class="target-locale"><a href="{% url strings_edit project_slug=project.slug string_id=string.id %}">{{string.target_locale}}</a></td>
+  </tr>
+{% endfor %}
+</table>
+
+<h2>{{ _('Translated') }} ({{ translated_strings.count }} {{ _('strings') }})</h2>
+<table class="translated">
+  <tr>
+    <th>{{ _('Group') }}</th>
+    <th>{{ BASE_LOCALE_NAME }}</th>
+    <th>{{ TARGET_LOCALE_NAME }}</th>
+  </tr>
+{% for string in translated_strings %}
+  <tr>
+    <td class="group">{{ string.group }}</td>
+    <td class="base-locale"><a href="{% url strings_edit project_slug=project.slug string_id=string.id %}">{{string.base_locale}}</a></td>
+    <td class="target-locale"><a href="{% url strings_edit project_slug=project.slug string_id=string.id %}">{{string.target_locale}}</a></td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}

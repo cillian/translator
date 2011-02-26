@@ -1,0 +1,7 @@
+{% extends "strings/form_base.html" %}
+
+{% block action %}{% url strings_revert project_slug=project.slug string_id=string.id version_id=version.id %}{% endblock %}
+{% block button_label %}{{ _('Revert to this revision') }}{% endblock %}
+{% block aside %}
+{% include "strings/_history.html" %}
+{% endblock %}

@@ -1,0 +1,5 @@
+activation email subject
+
+activation key is
+
+{{ activation_key }}

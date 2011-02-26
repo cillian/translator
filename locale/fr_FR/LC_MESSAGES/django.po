@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-02-25 23:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: projects/views.py:31
+msgid "Your new project has been created."
+msgstr "Votre nouveau projet a été créé."
+
+#: projects/views.py:34
+msgid "There was a problem creating your project."
+msgstr "Il y avait un problème de création de votre projet."
+
+#: reversion/admin.py:112 reversion/templates/reversion/change_list.html:8
+#: reversion/templates/reversion/recover_list.html:10
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: reversion/admin.py:165
+#, python-format
+msgid "Reverted to previous version, saved on %(datetime)s"
+msgstr ""
+
+#: reversion/admin.py:167
+#, python-format
+msgid ""
+"The %(model)s \"%(name)s\" was reverted successfully. You may edit it again "
+"below."
+msgstr ""
+
+#: reversion/admin.py:273
+#, python-format
+msgid "Recover %(name)s"
+msgstr ""
+
+#: reversion/admin.py:284
+#, python-format
+msgid "Revert %(name)s"
+msgstr ""
+
+#: reversion/management/commands/createinitialrevisions.py:76
+msgid "Initial version."
+msgstr ""
+
+#: reversion/templates/reversion/change_list.html:11
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:15
+#: reversion/templates/reversion/recover_list.html:23
+msgid "Date/time"
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:16
+msgid "User"
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:17
+msgid "Comment"
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:23
+#: reversion/templates/reversion/recover_list.html:30
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: reversion/templates/reversion/object_history.html:31
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: reversion/templates/reversion/recover_form.html:7
+#: reversion/templates/reversion/recover_list.html:7
+#: reversion/templates/reversion/revision_form.html:10
+msgid "Home"
+msgstr ""
+
+#: reversion/templates/reversion/recover_form.html:10
+#, python-format
+msgid "Recover deleted %(verbose_name)s"
+msgstr ""
+
+#: reversion/templates/reversion/recover_form.html:17
+msgid "Press the save button below to recover this version of the object."
+msgstr ""
+
+#: reversion/templates/reversion/recover_list.html:17
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: reversion/templates/reversion/recover_list.html:37
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: reversion/templates/reversion/revision_form.html:14
+msgid "History"
+msgstr "Historique"
+
+#: reversion/templates/reversion/revision_form.html:15
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: reversion/templates/reversion/revision_form.html:28
+msgid "Press the save button below to revert to this version of the object."
+msgstr ""
+
+#: settings/common.py:44 settings/common.py:49
+msgid "Spanish"
+msgstr "espagnol"
+
+#: settings/common.py:45 settings/common.py:50
+msgid "English"
+msgstr "Anglais"
+
+#: settings/common.py:46 settings/common.py:51
+msgid "French"
+msgstr "Français"
+
+#: strings/views.py:62
+msgid "Your new string has been created."
+msgstr "Votre nouvelle chaîne a été créé."
+
+#: strings/views.py:66
+msgid "There was a problem creating your string."
+msgstr "Il ya eu un problème la création de votre chaîne."
+
+#: templates/base.html:40
+msgid "Languages"
+msgstr "Langues"
+
+#: templates/base.html:46
+msgid "Fork it on"
+msgstr "Il fourche sur"
+
+#: templates/projects/_menu.html:9
+msgid "Translate To"
+msgstr "Traduire Pour"
+
+#: templates/projects/_menu.html:20
+msgid "New String"
+msgstr "Nouvelle chaîne"
+
+#: templates/projects/index.html:5
+msgid "New project"
+msgstr "Créer un projet"
+
+#: templates/projects/index.html:6
+msgid "Projects"
+msgstr "Projets"
+
+#: templates/projects/new.html:8
+msgid "Name"
+msgstr ""
+
+#: templates/projects/new.html:14
+msgid "Description"
+msgstr ""
+
+#: templates/projects/new.html:20
+msgid "URL"
+msgstr ""
+
+#: templates/projects/new.html:26
+msgid "Base locale"
+msgstr ""
+
+#: templates/projects/new.html:31
+msgid "Create Project"
+msgstr "Créer un projet"
+
+#: templates/projects/show.html:8
+msgid "Untranslated"
+msgstr "Non traduite"
+
+#: templates/projects/show.html:8 templates/projects/show.html.py:24
+msgid "strings"
+msgstr ""
+
+#: templates/projects/show.html:11 templates/projects/show.html.py:27
+#: templates/strings/form_base.html:12
+msgid "Group"
+msgstr "Groupe"
+
+#: templates/projects/show.html:24 templates/strings/form_base.html:31
+msgid "Translated"
+msgstr "Traduit"
+
+#: templates/registration/registration_form.html:13
+msgid "Username"
+msgstr ""
+
+#: templates/registration/registration_form.html:18
+msgid "Password"
+msgstr "Mot de passe"
+
+#: templates/registration/registration_form.html:22
+msgid "Confirm password"
+msgstr "Confirmer mot de passe"
+
+#: templates/registration/registration_form.html:28
+msgid "Email Address"
+msgstr "Adresse électronique"
+
+#: templates/registration/registration_form.html:40
+msgid "Sign Up"
+msgstr ""
+
+#: templates/strings/edit.html:4
+msgid "Save"
+msgstr "Enregistrer"
+
+#: templates/strings/new.html:4
+msgid "Create String"
+msgstr "Créer String"
+
+#: templates/strings/show_revision.html:4
+msgid "Revert to this revision"
+msgstr "Revenir à cette révision"
+
+#~ msgid "Account Settings"
+#~ msgstr "Paramètres du compte"
+
+#~ msgid "Sign in"
+#~ msgstr "Connexion"
+
+#~ msgid "Sign up"
+#~ msgstr "Inscrivez-vous sur"

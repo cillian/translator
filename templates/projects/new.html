@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>New project</h1>
+<form action="{% url projects_create %}" method="post">
+  {% csrf_token %}
+
+  <p>
+  <label for="id_name">{{ _('Name') }}</label><br />
+  {{ form.name }}
+  {{ form.name.errors }}
+  </p>
+
+  <p>
+  <label for="id_description">{{ _('Description') }}</label><br />
+  {{ form.description }}
+  {{ form.description.errors }}
+  </p>
+
+  <p>
+  <label for="id_url">{{ _('URL') }}</label><br />
+  {{ form.url }}
+  {{ form.url.errors }}
+  </p>
+
+  <p>
+  <label for="id_base-locale">{{ _('Base locale') }}</label><br />
+  {{ form.base_locale }}
+  {{ form.base_locale.errors }}
+  </p>
+
+  <button type="submit" value="{{ _('Create Project') }}">{{ _('Create Project') }}</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,175 @@
+body {
+  font-family: "Arial","Helvetica",sans-serif;
+}
+
+h1,
+h2,
+p,
+ul,
+ol,
+table {
+  margin-bottom: 1.4em;
+}
+li {
+  margin-bottom: 1em;
+}
+
+
+header,
+footer,
+section#content,
+section#menu {
+  width: 960px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  clear: both;
+  padding: 10px 0;
+}
+header,
+section#menu {
+  height: 20px;
+  h1 {
+    float: left;
+    margin-right: 20px;
+  }
+  nav {
+    float: right;
+  }
+}
+header {
+  height: 20px;
+  h1 a,
+  h1 a:visited {
+    color: brown;
+  }
+}
+footer {
+  height: 18px;
+  ul {
+    display: inline-block;
+  }
+  li {
+    display:inline;
+    list-style-type: none;
+  }
+  li a.current {
+    font-weight: bold;
+  }
+  #fork-it {
+    float: right;
+  }
+}
+section#menu {
+  height: 24px;
+  form {
+    display: inline-block;
+  }
+}
+
+/* */
+
+section:before,
+section:after {
+  content: "\0020"; display: block; height: 0; visibility: hidden;
+}
+section:after {
+  clear: both;
+}
+/* */
+#new-project-link {
+  float: right;
+}
+/* */
+
+#group {
+  display: none;
+}
+#strings_new #group {
+  display: block;
+}
+
+/* */
+table {
+  width: 100%;
+  border: 1px solid #eee;
+  font-size: 11px;
+  font-family: "Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  tr:first-child td {
+    border-top: 0;
+  }
+  th,
+  td {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 7px 30px 5px 5px;
+    background: #fefefe;
+    span {
+      font-size: 10px;
+      color: #bbb;
+    }
+  }
+  td.group {
+    width: 150px;
+  }
+  td.target-locale {
+    padding-right: 5px;
+  }
+  th {
+    background: #f1f1f1;
+    color: #bbb;
+    font-weight: normal;
+    text-align: left;
+  }
+  .base-locale,
+  .target-locale {
+    width: 400px;
+  }
+}
+.translated .target-locale a {
+  color: #363;
+}
+.untranslated .target-locale a {
+  color: #633;
+}
+
+
+/* */
+
+section#base-locale,
+section#target-locale,
+aside {
+  float: left;
+  width: 270px;
+/*  border: 1px solid #c00; */
+  textarea {
+    width: 100%;
+  }
+}
+section#base-locale,
+section#target-locale {
+  margin-right: 50px;
+}
+section#base-locale {
+  textarea {
+    border: 1px solid #ddd;
+  }
+}
+
+section#target-locale {
+  text-align: right;
+
+  p {
+  }
+  textarea {
+    border: 1px solid #999;
+  }
+}

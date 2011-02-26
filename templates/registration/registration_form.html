@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block body %}
+<h1>Create an account</h1>
+<form action="." method="post">
+  {% if form.error_dict %}
+    <p class="error">Please correct the errors below.</p>
+  {% endif %}
+{{ form.errors }}
+        <div id="username" class="field{% if form.username.errors %} error{% endif %}">
+          <label for="id_username">{{ _('Username') }}</label>
+          {{ form.username }}
+          {{ form.username.errors }} 
+        </div>
+        <div class="field password {% if form.password1.errors %} error{% endif %}">
+          <label for="id_password">{{ _('Password') }}</label>          
+          {{ form.password1 }}                
+        </div>
+        <div class="field password confirm {% if form.password2.errors %} error{% endif %}">
+          <label for="id_password_confirm">{{ _('Confirm password') }}</label>
+          {{ form.password2 }}            
+          {{ form.password2.errors }}
+          {{ form.password2.errors }} 
+        </div>
+        <div class="field{% if form.email.errors %} error{% endif %}">
+          <label for="id_email">{{ _('Email Address') }}</label>
+          {{ form.email }}
+          {{ form.email.errors }}
+        </div>
+
+  <div>
+  <select name="locale">
+    {% for lang in settings.LANGUAGES %}
+      <option value="{{ lang.0 }}">{{ lang.1 }}</option>
+    {% endfor %}
+  </select>
+  </div>
+  <input type="submit" value="{{ _('Sign Up') }}" />
+</label>
+{% endblock %}
+
